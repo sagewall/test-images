@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+
+  <body>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@esri/calcite-components@latest/dist/calcite/calcite.esm.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@esri/calcite-components@latest/dist/calcite/calcite.css"
+    />
+
+    <calcite-list group="layers" drag-enabled>
+      <calcite-list-item
+        label="Hiking trails"
+        description="Designated routes for hikers to use."
+        value="hiking-trails"
+      >
+      </calcite-list-item>
+      <calcite-list-item
+        label="Waterfalls"
+        description="Vertical drops from a river."
+        value="waterfalls"
+      >
+      </calcite-list-item>
+      <calcite-list-item
+        label="Nested List Item"
+        description="a calcite-list-item with a calcite-list"
+        value="rivers"
+      >
+        <calcite-list group="layers" drag-enabled>
+          <calcite-list-item
+            label="Hiking trails"
+            description="Designated routes for hikers to use."
+            value="hiking-trails"
+          >
+            <calcite-action
+              slot="actions-end"
+              icon="layer"
+              text="Trails layer"
+            ></calcite-action>
+          </calcite-list-item>
+          <calcite-list-item
+            label="Waterfalls"
+            description="Vertical drops from a river."
+            value="waterfalls"
+          >
+            <calcite-action
+              slot="actions-end"
+              icon="layer"
+              text="Waterfalls layer"
+            ></calcite-action>
+          </calcite-list-item>
+          <calcite-list-item
+            label="Rivers"
+            description="Large naturally flowing watercourses."
+            value="rivers"
+          >
+            <calcite-action
+              slot="actions-end"
+              icon="layer"
+              text="Rivers layer"
+            ></calcite-action>
+          </calcite-list-item>
+        </calcite-list>
+      </calcite-list-item>
+    </calcite-list>
+  </body>
+</html>
